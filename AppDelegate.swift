@@ -1,13 +1,8 @@
 /************************************************************************************************************************************/
 /** @file		AppDelegate.swift
- *  @project    0_0 - Empty Template (Swift)
+ *  @project    0_0 - Music
  * 	@brief		x
  * 	@details	x
- *
- * 	@author		Justin Reina, Firmware Engineer, Jaostech
- * 	@created	11/12/15
- * 	@last rev	x
- *
  *
  * 	@notes		x
  *
