@@ -7,7 +7,7 @@
  * 	@notes		x
  *
  * 	@section	Opens
- * 			none current
+ * 			works on simulator ok
  *
  * 	@section	Legal Disclaimer
  * 			All contents of this source file and/or any other Jaostech related source files are the explicit property on Jaostech
@@ -24,12 +24,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var bar : TabBar;
     
-    /************************************************************************************************************************************/
+    /********************************************************************************************************************************/
     /** @fcn        init()
      *  @brief      x
      *  @details    x
      */
-    /************************************************************************************************************************************/
+    /********************************************************************************************************************************/
     override init() {
         
         //Init State
@@ -38,6 +38,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         let _ : Music = Music();
 
+        let _ : NewClass = NewClass();
+        
         return;
     }
     

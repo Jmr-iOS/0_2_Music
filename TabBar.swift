@@ -13,8 +13,15 @@
  *      http://stackoverflow.com/questions/24030348/how-to-create-a-button-programmatically
  *      http://stackoverflow.com/questions/24102191/make-a-uibutton-programatically-in-swift
  *
+ *  @section    Music Tabs
+ *      Library
+ *      For You
+ *      Radio
+ *      Search
+ *
  * @section    Opens
- *		none listed
+ *		insert tab names
+ *      insert tab icons
  *
  * @section    Legal Disclaimer
  *      All contents of this source file and/or any other Jaostech related source files are the explicit property on Jaostech
@@ -30,6 +37,8 @@ class TabBar : NSObject {
     var navs  : [UINavigationController];
     var views : [UIView];
 
+    let names : [String] = ["Library", "For You", "Browse", "Radio", "Search"];
+    
     
     /********************************************************************************************************************************/
     /** @fcn        init()
@@ -67,25 +76,25 @@ class TabBar : NSObject {
     /********************************************************************************************************************************/
     func initTabs() {
 
-        let N : Int = 4;
+        let N : Int = self.names.count;
         
         for i in 0..<N {
             let newView : UIView = UIView();
             
-            self.setMiscBackgroundColor(newView);
+            setMiscBackgroundColor(newView);
             
             views.append(newView);
             
             let newViewController : UIViewController = UIViewController();
-            newViewController.title = String(format: "View %d", arguments: [i]);
+            newViewController.title = self.names[i];
             newViewController.view  = newView;
             
             let newNavC : UINavigationController = UINavigationController(rootViewController: newViewController);
             
-            self.addMiscViewLabel(newView, vc: newViewController);
-            self.addTabImage(i, navController: newNavC);
+            addMiscViewLabel(newView, vc: newViewController);
+            addTabImage(i, navController: newNavC);
             
-            self.navs.append(newNavC);
+            navs.append(newNavC);
         }
         
         return;
@@ -124,6 +133,7 @@ class TabBar : NSObject {
     func addMiscViewLabel(_ view : UIView, vc :UIViewController) {
         
         let l : UILabel = UILabel(frame: UIScreen.main.bounds);
+       
         l.text = "The subViews of tab '\(vc.title!)' will go here";
         l.textAlignment = .center;
         

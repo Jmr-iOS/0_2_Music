@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D05682981FEEC47800B68DD9 /* NewClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05682971FEEC47800B68DD9 /* NewClass.swift */; };
 		D06E12E01FEAA779005EE88C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06E12DE1FEAA779005EE88C /* AppDelegate.swift */; };
 		D06E12E71FEAA790005EE88C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D06E12E21FEAA78F005EE88C /* Assets.xcassets */; };
 		D06E12E81FEAA790005EE88C /* Base.lproj in Resources */ = {isa = PBXBuildFile; fileRef = D06E12E31FEAA78F005EE88C /* Base.lproj */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		D039B4B61BF4D7950024005F /* 0_2 - Music.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "0_2 - Music.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D05682971FEEC47800B68DD9 /* NewClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewClass.swift; path = ../../Tabs/NewClass.swift; sourceTree = "<group>"; };
 		D06E12DE1FEAA779005EE88C /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../AppDelegate.swift; sourceTree = "<group>"; };
 		D06E12E21FEAA78F005EE88C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D06E12E31FEAA78F005EE88C /* Base.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Base.lproj; sourceTree = "<group>"; };
@@ -47,6 +49,7 @@
 			isa = PBXGroup;
 			children = (
 				D0DFAD1F1CB158BA00555B21 /* Base */,
+				D05682941FEEC29600B68DD9 /* Tabs */,
 				D0DFAD221CB159B100555B21 /* Data */,
 				D06E12DE1FEAA779005EE88C /* AppDelegate.swift */,
 				D0A3BFD91FEEACE7004B7618 /* Music.swift */,
@@ -60,6 +63,14 @@
 				D039B4B61BF4D7950024005F /* 0_2 - Music.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		D05682941FEEC29600B68DD9 /* Tabs */ = {
+			isa = PBXGroup;
+			children = (
+				D05682971FEEC47800B68DD9 /* NewClass.swift */,
+			);
+			path = Tabs;
 			sourceTree = "<group>";
 		};
 		D0DFAD1F1CB158BA00555B21 /* Base */ = {
@@ -159,6 +170,7 @@
 			files = (
 				D06E12E01FEAA779005EE88C /* AppDelegate.swift in Sources */,
 				D06E12EF1FEAA7A8005EE88C /* DataBackup.swift in Sources */,
+				D05682981FEEC47800B68DD9 /* NewClass.swift in Sources */,
 				D06E12EE1FEAA7A8005EE88C /* Globals.swift in Sources */,
 				D06E12EB1FEAA790005EE88C /* Stdcomments.swift in Sources */,
 				D0A3BFD81FEEAA07004B7618 /* TabBar.swift in Sources */,
