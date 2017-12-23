@@ -25,13 +25,13 @@ import UIKit
 class DataBackup : NSObject, NSCoding {
 
     //class data
-    @objc static let DocumentsDirectory = FileManager().urls(for: .documentDirectory, in: .userDomainMask).first!
-    @objc static let ArchiveURL         = DocumentsDirectory.appendingPathComponent("Empty_Templ_Sw_Bak");
+    static let DocumentsDirectory = FileManager().urls(for: .documentDirectory, in: .userDomainMask).first!
+    static let ArchiveURL         = DocumentsDirectory.appendingPathComponent("Empty_Templ_Sw_Bak");
 
-    @objc static let verbose : Bool = false;
+    static let verbose : Bool = false;
 
     //system value FOR backup
-    @objc static var vc : ViewController!;                                        /* for use and access to data during a backup store/load*/
+    static var tbc : UITabBarController!;                                   /* for use and access to data during a backup store/load*/
 
     //data values FOR or FROM backup (temp verbose title for clarity)
     var someVal_0 : Int?;
@@ -84,7 +84,7 @@ class DataBackup : NSObject, NSCoding {
     /*	@fcn		class func loadData() -> DataBackup?                                                                            */
     /*  @brief      retrieve the App data & state to from file backup                                                               */
     /********************************************************************************************************************************/
-    @objc class func loadData() -> DataBackup? {
+    class func loadData() -> DataBackup? {
 
         if(DataBackup.verbose) { print("-->DataBackup.loadData():             entering NSKeyedUnarchiver search"); }
 
@@ -104,7 +104,7 @@ class DataBackup : NSObject, NSCoding {
     /*	@fcn		class func saveData()                                                                                           */
     /*  @brief      save the App data & state from the view controller access to file for later retrieval                           */
     /********************************************************************************************************************************/
-    @objc class func saveData() {
+    class func saveData() {
 
         var someData : Int = 0;
         
@@ -140,18 +140,18 @@ class DataBackup : NSObject, NSCoding {
     /*	@fcn		class func updateBackup()                                                                                       */
     /*  @brief      a clean wrapper for simple and clear code architecture communication                                            */
     /********************************************************************************************************************************/
-    @objc class func updateBackup() {
+    class func updateBackup() {
         DataBackup.saveData();
         return;
     }
     
     
     /********************************************************************************************************************************/
-    /*	@fcn		class func storeViewController(vc : ViewController)                                                             */
+    /*	@fcn		class func storeTabBarController(_ tbc : UITabBarController)                                                    */
     /*  @brief      x                                                                                                               */
     /********************************************************************************************************************************/
-    @objc class func storeViewController(_ vc : ViewController) {
-        DataBackup.vc = vc;
+    class func storeTabBarController(_ tbc : UITabBarController) {
+        DataBackup.tbc = tbc;
         return;
     }
 }

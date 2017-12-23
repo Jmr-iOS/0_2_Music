@@ -8,19 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		D06E12E01FEAA779005EE88C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06E12DE1FEAA779005EE88C /* AppDelegate.swift */; };
-		D06E12E11FEAA779005EE88C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06E12DF1FEAA779005EE88C /* ViewController.swift */; };
 		D06E12E71FEAA790005EE88C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D06E12E21FEAA78F005EE88C /* Assets.xcassets */; };
 		D06E12E81FEAA790005EE88C /* Base.lproj in Resources */ = {isa = PBXBuildFile; fileRef = D06E12E31FEAA78F005EE88C /* Base.lproj */; };
 		D06E12EA1FEAA790005EE88C /* Empty.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D06E12E51FEAA78F005EE88C /* Empty.storyboard */; };
 		D06E12EB1FEAA790005EE88C /* Stdcomments.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06E12E61FEAA790005EE88C /* Stdcomments.swift */; };
 		D06E12EE1FEAA7A8005EE88C /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06E12EC1FEAA7A8005EE88C /* Globals.swift */; };
 		D06E12EF1FEAA7A8005EE88C /* DataBackup.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06E12ED1FEAA7A8005EE88C /* DataBackup.swift */; };
+		D0A3BFD81FEEAA07004B7618 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A3BFD71FEEAA07004B7618 /* TabBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D039B4B61BF4D7950024005F /* 0_2 - Music.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "0_2 - Music.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D06E12DE1FEAA779005EE88C /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../AppDelegate.swift; sourceTree = "<group>"; };
-		D06E12DF1FEAA779005EE88C /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../ViewController.swift; sourceTree = "<group>"; };
 		D06E12E21FEAA78F005EE88C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D06E12E31FEAA78F005EE88C /* Base.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Base.lproj; sourceTree = "<group>"; };
 		D06E12E41FEAA78F005EE88C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -28,6 +27,7 @@
 		D06E12E61FEAA790005EE88C /* Stdcomments.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stdcomments.swift; sourceTree = "<group>"; };
 		D06E12EC1FEAA7A8005EE88C /* Globals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Globals.swift; path = ../Data/Globals.swift; sourceTree = "<group>"; };
 		D06E12ED1FEAA7A8005EE88C /* DataBackup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataBackup.swift; path = ../Data/DataBackup.swift; sourceTree = "<group>"; };
+		D0A3BFD71FEEAA07004B7618 /* TabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TabBar.swift; path = ../TabBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,7 +47,7 @@
 				D0DFAD1F1CB158BA00555B21 /* Base */,
 				D0DFAD221CB159B100555B21 /* Data */,
 				D06E12DE1FEAA779005EE88C /* AppDelegate.swift */,
-				D06E12DF1FEAA779005EE88C /* ViewController.swift */,
+				D0A3BFD71FEEAA07004B7618 /* TabBar.swift */,
 			);
 			sourceTree = "<group>";
 		};
@@ -154,11 +154,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D06E12E11FEAA779005EE88C /* ViewController.swift in Sources */,
 				D06E12E01FEAA779005EE88C /* AppDelegate.swift in Sources */,
 				D06E12EF1FEAA7A8005EE88C /* DataBackup.swift in Sources */,
 				D06E12EE1FEAA7A8005EE88C /* Globals.swift in Sources */,
 				D06E12EB1FEAA790005EE88C /* Stdcomments.swift in Sources */,
+				D0A3BFD81FEEAA07004B7618 /* TabBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

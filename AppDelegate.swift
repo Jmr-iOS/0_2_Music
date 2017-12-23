@@ -22,18 +22,38 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?;
 
-
+    var bar : TabBar;
+    
+    /************************************************************************************************************************************/
+    /** @fcn        init()
+     *  @brief      x
+     *  @details    x
+     */
+    /************************************************************************************************************************************/
+    override init() {
+        
+        //Init State
+        self.bar = TabBar();
+        super.init();
+        
+        return;
+    }
+    
+    /********************************************************************************************************************************/
+    /** @fcn        application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool
+     *  @brief      x
+     *  @details    x
+     */
+    /********************************************************************************************************************************/
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         self.window = UIWindow.init(frame: UIScreen.main.bounds);
         
-        self.window?.backgroundColor = UIColor.white;
+        let tbc : UITabBarController = self.bar.getUITabBarController();
         
-        let viewController:ViewController = ViewController();
+        tbc.viewControllers = self.bar.navs;
         
-        viewController.view.translatesAutoresizingMaskIntoConstraints = false;
-        
-        self.window?.rootViewController = viewController;
+        self.window?.rootViewController = tbc;
         
         self.window?.makeKeyAndVisible();
         
@@ -41,6 +61,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         return true;
     }
+    
 
     func applicationWillResignActive(_ application: UIApplication)    { return; }
     func applicationDidEnterBackground(_ application: UIApplication)  { return; }
