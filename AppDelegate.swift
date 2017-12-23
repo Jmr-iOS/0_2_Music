@@ -1,13 +1,13 @@
 /************************************************************************************************************************************/
 /** @file		AppDelegate.swift
- *  @project    0_0 - Music
+ *  @project    0_2 - Music
  * 	@brief		x
  * 	@details	x
  *
  * 	@notes		x
  *
  * 	@section	Opens
- * 			works on simulator ok
+ * 			none listed
  *
  * 	@section	Legal Disclaimer
  * 			All contents of this source file and/or any other Jaostech related source files are the explicit property on Jaostech
@@ -33,13 +33,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     override init() {
         
         //Init State
-        self.bar = TabBar();
+        bar = TabBar();
         super.init();
 
-        let _ : Music = Music();
-
-        let _ : NewClass = NewClass();
-        
         return;
     }
     
@@ -51,15 +47,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     /********************************************************************************************************************************/
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        self.window = UIWindow.init(frame: UIScreen.main.bounds);
+        window = UIWindow.init(frame: UIScreen.main.bounds);
         
-        let tbc : UITabBarController = self.bar.getUITabBarController();
+        let tbc : UITabBarController = bar.getUITabBarController();
         
-        tbc.viewControllers = self.bar.navs;
+        tbc.viewControllers = bar.navs;
         
-        self.window?.rootViewController = tbc;
+        window?.rootViewController = tbc;
         
-        self.window?.makeKeyAndVisible();
+        window?.makeKeyAndVisible();
         
         print("AppDelegate.application():          Application launch complete");
         

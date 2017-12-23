@@ -1,12 +1,12 @@
 /************************************************************************************************************************************/
 /** @file       TabBar.swift
- *  @project    0_0 - UITabBar
+ *  @project    0_2 - Music
  *  @brief      x
  *  @details    x
  *
  *  @author     Justin Reina, Firmware Engineer, Jaostech
  *  @created    12/21/17
- *  @last rev   12/22/17
+ *  @last rev   12/23/17
  *
  *  @section     Reference
  *      http://stackoverflow.com/questions/24046898/how-do-i-create-a-new-swift-project-without-using-storyboards
@@ -20,8 +20,8 @@
  *      Search
  *
  * @section    Opens
- *		insert tab names
  *      insert tab icons
+ *      table listing refreshes correctly (swipe dowm does not alter top of table)
  *
  * @section    Legal Disclaimer
  *      All contents of this source file and/or any other Jaostech related source files are the explicit property on Jaostech
@@ -37,6 +37,8 @@ class TabBar : NSObject {
     var navs  : [UINavigationController];
     var views : [UIView];
 
+    var libTab : LibraryTab;
+    
     let names : [String] = ["Library", "For You", "Browse", "Radio", "Search"];
     
     
@@ -49,15 +51,17 @@ class TabBar : NSObject {
     override init() {
         
         //Init
-        self.tbc   = UITabBarController();
-        self.navs  = [UINavigationController]();
-        self.views = [UIView]();
+        tbc   = UITabBarController();
+        navs  = [UINavigationController]();
+        views = [UIView]();
+        
+        libTab = LibraryTab();
         
         //Super
         super.init();
         
         //Tabs
-        self.initTabs();
+        initTabs();
 
         print("TabBar.init():    initialization complete");
         
@@ -79,19 +83,24 @@ class TabBar : NSObject {
         let N : Int = self.names.count;
         
         for i in 0..<N {
-            let newView : UIView = UIView();
             
-            setMiscBackgroundColor(newView);
+            let newView : UIView;
+            let newViewController : UIViewController = UIViewController();
+            newViewController.title = names[i];
+
+            if(i == 0) {
+                newView = LibraryTab();
+            } else {
+                newView = UIView();
+                addMiscViewLabel(newView, vc: newViewController);
+                setMiscBackgroundColor(newView);
+            }
             
             views.append(newView);
             
-            let newViewController : UIViewController = UIViewController();
-            newViewController.title = self.names[i];
             newViewController.view  = newView;
             
             let newNavC : UINavigationController = UINavigationController(rootViewController: newViewController);
-            
-            addMiscViewLabel(newView, vc: newViewController);
             addTabImage(i, navController: newNavC);
             
             navs.append(newNavC);

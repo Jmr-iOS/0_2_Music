@@ -45,17 +45,18 @@ class Music: NSObject {
     let authLvls : [String] = ["notDetermined", "denied", "restricted", "authorized"];
 
     /********************************************************************************************************************************/
-    /** @fcn        override init()                                                                                                 */
-    /*  @brief      init the var                                                                                                    */
-    /*  @post       query & media init                                                                                              */
-    /*  @assum      query is valid                                                                                                  */
+    /** @fcn    override init()                                                                                                     */
+    /*  @brief  init the var                                                                                                        */
+    /*  @post   query & media init                                                                                                  */
+    /*                                                                                                                              */
+    /*  @warn   access must be authorized if used on Simulator                                                                      */
     /********************************************************************************************************************************/
     override init() {
 
         //Init
-        self.query = MPMediaQuery();                                    /* grab handle                                              */
-        self.media = self.query.items!;                                 /* grab media listing                                       */
-        self.artists = [];                                              /* init empty                                               */
+        query = MPMediaQuery();                                    /* grab handle                                              */
+        media = query.items!;                                 /* grab media listing                                       */
+        artists = [];                                              /* init empty                                               */
         super.init();
         
         //Find the media
@@ -102,6 +103,11 @@ class Music: NSObject {
     /********************************************************************************************************************************/
     func parseArtists() {
 
+        //Safety
+        if(media.count == 0) {
+            return;                                                                     /* abort when no media present              */
+        }
+        
         //Grab
         for i in 1...(media.count-1) {
             
@@ -111,13 +117,18 @@ class Music: NSObject {
                 let newArtist : String = media[i].albumArtist!;
 
                 //Check if existing in artists
-                if(!self.artists.contains(newArtist)) {
-                    self.artists.append(newArtist);                                         /* append if not found                  */
+                if(!artists.contains(newArtist)) {
+                    artists.append(newArtist);                                         /* append if not found                       */
                 }
             }
         }
-  
-        print("done with \(self.artists.count) artists");
+        
+        //Alphabetize
+        artists.sort { $0 < $1 }
+        
+        //Exit
+        print("Music.parseArtsists():    parse complete. Found \(artists.count) artists");
+        
         return;
     }
 }
