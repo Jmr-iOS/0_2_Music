@@ -35,7 +35,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //Init State
         self.bar = TabBar();
         super.init();
-        
+
+        let _ : Music = Music();
+
         return;
     }
     
