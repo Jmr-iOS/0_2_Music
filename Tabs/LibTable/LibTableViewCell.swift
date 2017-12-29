@@ -23,6 +23,7 @@ class LibTableViewCell : UITableViewCell {
     
     let cellSelectionFade : Bool = false;
 
+    
     /********************************************************************************************************************************/
 	/**	@fcn		override init(style: UITableViewCellStyle, reuseIdentifier: String?)
 	 *  @brief		x

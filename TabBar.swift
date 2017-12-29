@@ -39,10 +39,11 @@ class TabBar : NSObject {
     var views : [UIView];
 
     //Tabs
-    var libTab : LibraryTab;
+    var libTab : LibraryTab?;
     
     //Data
-    //@todo     m
+    var m : Music;
+
     
     /********************************************************************************************************************************/
     /** @fcn        init()
@@ -52,17 +53,22 @@ class TabBar : NSObject {
     /********************************************************************************************************************************/
     override init() {
         
-        //Init
+        //Init UI
         tbc   = UITabBarController();
         navs  = [UINavigationController]();
         views = [UIView]();
         
-        libTab = LibraryTab();
+        //Init Data
+        m = Music();
         
         //Super
         super.init();
         
-        //Tabs
+        //Setup Data
+        m.parseArtists();
+        
+        //Setup Tabs
+        libTab = LibraryTab(bar: self);
         initTabs();
 
         print("TabBar.init():    initialization complete");
@@ -91,7 +97,7 @@ class TabBar : NSObject {
             newViewController.title = tabNames[i];
 
             if(i == 0) {
-                newView = LibraryTab();
+                newView = LibraryTab(bar:self);
             } else {
                 newView = UIView();
                 addMiscViewLabel(newView, vc: newViewController);

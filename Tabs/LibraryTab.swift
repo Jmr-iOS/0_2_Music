@@ -40,6 +40,7 @@ class LibraryTab : UIView {
     //std table config
     let cellSelectionFade : Bool = true;
 
+    var bar : TabBar;
 
     /********************************************************************************************************************************/
     /** @fcn        init()
@@ -47,7 +48,9 @@ class LibraryTab : UIView {
      *  @details    x
      */
     /********************************************************************************************************************************/
-    init() {
+    init(bar : TabBar) {
+        
+        self.bar = bar;
         
         super.init(frame: UIScreen.main.bounds);
 
@@ -69,10 +72,10 @@ class LibraryTab : UIView {
         
         if(verbose){ print("ViewController.addCustomTable():      adding a custom table"); }
         
-       libTable = LibTableView(frame:self.frame, style:UITableViewStyle.plain);
+        libTable = LibTableView(bar: self.bar, frame:self.frame, style:UITableViewStyle.plain);
         
         //add the handler
-        libTableHandler = LibTableViewHandler(items: libTable.m.artists, table: libTable);
+        libTableHandler = LibTableViewHandler(items: self.bar.m.artists, table: libTable);
         
         libTable.delegate   = libTableHandler;                                    /* Set both to handle clicks & provide data       */
         libTable.dataSource = libTableHandler;

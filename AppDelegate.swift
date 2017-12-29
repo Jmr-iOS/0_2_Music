@@ -34,6 +34,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //Init State
         bar = TabBar();
+        
+        //Super
         super.init();
 
         return;

@@ -24,21 +24,20 @@ class LibTableView : UITableView {
     
     var verbose : Bool = true;
 
-    var m : Music;
+    var bar : TabBar;
     
     var myLibCells : [LibTableViewCell] = [LibTableViewCell]();
     
     
     /********************************************************************************************************************************/
-	/**	@fcn		init(frame: CGRect, style: UITableViewStyle)
+	/**	@fcn		init(bar : TabBar, frame: CGRect, style: UITableViewStyle)
 	 *  @brief		x
 	 *  @details	x
 	 */
 	/********************************************************************************************************************************/
-    override init(frame: CGRect, style: UITableViewStyle) {
+    init(bar : TabBar, frame: CGRect, style: UITableViewStyle) {
 
-        m = Music();
-        m.parseArtists();
+        self.bar = bar;
         
         super.init(frame:frame, style:style);
 
@@ -46,11 +45,11 @@ class LibTableView : UITableView {
         
         self.translatesAutoresizingMaskIntoConstraints = false;
         
-        for i in 0...(m.artists.count-1) {
+        for i in 0...(bar.m.artists.count-1) {
             
             let newCell : LibTableViewCell = LibTableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "why");
             
-            let cellText:String = m.artists[i];
+            let cellText:String = bar.m.artists[i];
             
             let subjectField:UILabel = UILabel(frame: CGRect(x:55, y: 25, width: 303, height:  25));
             
