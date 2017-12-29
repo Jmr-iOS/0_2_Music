@@ -40,7 +40,7 @@ class Music: NSObject {
     var media : [MPMediaItem];
     
     //Parse Vars
-    var artists : [String];
+    private var artists : [String];
     
     let authLvls : [String] = ["notDetermined", "denied", "restricted", "authorized"];
 
@@ -130,6 +130,32 @@ class Music: NSObject {
         print("Music.parseArtsists():    parse complete. Found \(artists.count) artists");
         
         return;
+    }
+    
+    
+    /********************************************************************************************************************************/
+    /** @fcn        func getArtists() -> [String]
+     *  @brief      access the library artists
+     *  @details    x
+     *
+     *  @return     ([String]) artist names
+     */
+    /********************************************************************************************************************************/
+    func getArtists() -> [String] {
+        return self.artists;
+    }
+    
+
+    /********************************************************************************************************************************/
+    /** @fcn        func getArtist(i : Int) -> String
+     *  @brief      get a specific artist
+     *  @details    x
+     *
+     *  @return     (String) artist name
+     */
+    /********************************************************************************************************************************/
+    func getArtist(i : Int) -> String {
+        return self.artists[i];
     }
 }
 

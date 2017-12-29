@@ -75,7 +75,7 @@ class LibraryTab : UIView {
         libTable = LibTableView(bar: self.bar, frame:self.frame, style:UITableViewStyle.plain);
         
         //add the handler
-        libTableHandler = LibTableViewHandler(items: self.bar.m.artists, table: libTable);
+        libTableHandler = LibTableViewHandler(items: bar.getArtists(), table: libTable);
         
         libTable.delegate   = libTableHandler;                                    /* Set both to handle clicks & provide data       */
         libTable.dataSource = libTableHandler;

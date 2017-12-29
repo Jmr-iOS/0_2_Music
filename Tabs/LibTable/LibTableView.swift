@@ -45,11 +45,11 @@ class LibTableView : UITableView {
         
         self.translatesAutoresizingMaskIntoConstraints = false;
         
-        for i in 0...(bar.m.artists.count-1) {
+        for i in 0...(bar.getArtists().count-1) {
             
             let newCell : LibTableViewCell = LibTableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "why");
             
-            let cellText:String = bar.m.artists[i];
+            let cellText:String = bar.getArtists()[i];
             
             let subjectField:UILabel = UILabel(frame: CGRect(x:55, y: 25, width: 303, height:  25));
             

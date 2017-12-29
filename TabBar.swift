@@ -42,7 +42,7 @@ class TabBar : NSObject {
     var libTab : LibraryTab?;
     
     //Data
-    var m : Music;
+    var m : Music;                                                  /* container and wrapper, with access routines to library       */
 
     
     /********************************************************************************************************************************/
@@ -120,7 +120,7 @@ class TabBar : NSObject {
     
     /********************************************************************************************************************************/
     /** @fcn        setMiscBackgroundColor(_ view : UIView)
-     *  @brief      x
+     *  @brief      pick a miscellaneous color and apply it to the view
      *  @details    x
      *
      *  @param      [in] (UIView) view - view to apply background color to
@@ -207,6 +207,31 @@ class TabBar : NSObject {
     /********************************************************************************************************************************/
     func getUITabBarController() -> UITabBarController {
         return tbc;
+    }
+    
+    
+    /********************************************************************************************************************************/
+    /** @fcn        func getArtists() -> [String]
+     *  @brief      access the library artists
+     *  @details    x
+     *
+     *  @return     ([String]) artist names
+     */
+    /********************************************************************************************************************************/
+    func getArtists() -> [String] {
+        return self.m.getArtists();
+    }
+    
+    /********************************************************************************************************************************/
+    /** @fcn        func getArtist(i : Int) -> String
+     *  @brief      get a specific artist
+     *  @details    x
+     *
+     *  @return     (String) artist name
+     */
+    /********************************************************************************************************************************/
+    func getArtist(i : Int) -> String {
+        return self.m.getArtist(i:i);
     }
 }
 
