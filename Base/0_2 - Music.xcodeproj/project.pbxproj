@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D05682981FEEC47800B68DD9 /* LibraryTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05682971FEEC47800B68DD9 /* LibraryTab.swift */; };
-		D056829E1FEEC9E400B68DD9 /* LibTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D056829B1FEEC9E400B68DD9 /* LibTableView.swift */; };
-		D056829F1FEEC9E400B68DD9 /* LibTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D056829C1FEEC9E400B68DD9 /* LibTableViewCell.swift */; };
-		D05682A01FEEC9E400B68DD9 /* LibTableViewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D056829D1FEEC9E400B68DD9 /* LibTableViewHandler.swift */; };
+		D0036CD41FF698F7008CF8EB /* LibraryTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0036CD31FF698F7008CF8EB /* LibraryTab.swift */; };
+		D01302141FF69A8C00E5DEDE /* LibTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01302111FF69A8C00E5DEDE /* LibTableViewCell.swift */; };
+		D01302151FF69A8C00E5DEDE /* LibTableViewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01302121FF69A8C00E5DEDE /* LibTableViewHandler.swift */; };
+		D01302161FF69A8C00E5DEDE /* LibTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01302131FF69A8C00E5DEDE /* LibTableView.swift */; };
 		D06E12E01FEAA779005EE88C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06E12DE1FEAA779005EE88C /* AppDelegate.swift */; };
 		D06E12E71FEAA790005EE88C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D06E12E21FEAA78F005EE88C /* Assets.xcassets */; };
 		D06E12E81FEAA790005EE88C /* Base.lproj in Resources */ = {isa = PBXBuildFile; fileRef = D06E12E31FEAA78F005EE88C /* Base.lproj */; };
@@ -23,11 +23,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D0036CD31FF698F7008CF8EB /* LibraryTab.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LibraryTab.swift; path = ../Tabs/LibraryTab.swift; sourceTree = "<group>"; };
+		D01302111FF69A8C00E5DEDE /* LibTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LibTableViewCell.swift; path = ../../Tabs/LibTable/LibTableViewCell.swift; sourceTree = "<group>"; };
+		D01302121FF69A8C00E5DEDE /* LibTableViewHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LibTableViewHandler.swift; path = ../../Tabs/LibTable/LibTableViewHandler.swift; sourceTree = "<group>"; };
+		D01302131FF69A8C00E5DEDE /* LibTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LibTableView.swift; path = ../../Tabs/LibTable/LibTableView.swift; sourceTree = "<group>"; };
 		D039B4B61BF4D7950024005F /* 0_2 - Music.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "0_2 - Music.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D05682971FEEC47800B68DD9 /* LibraryTab.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LibraryTab.swift; path = ../../Tabs/LibraryTab.swift; sourceTree = "<group>"; };
-		D056829B1FEEC9E400B68DD9 /* LibTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LibTableView.swift; path = ../../../Tabs/LibTable/LibTableView.swift; sourceTree = "<group>"; };
-		D056829C1FEEC9E400B68DD9 /* LibTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LibTableViewCell.swift; path = ../../../Tabs/LibTable/LibTableViewCell.swift; sourceTree = "<group>"; };
-		D056829D1FEEC9E400B68DD9 /* LibTableViewHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LibTableViewHandler.swift; path = ../../../Tabs/LibTable/LibTableViewHandler.swift; sourceTree = "<group>"; };
 		D06E12DE1FEAA779005EE88C /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../AppDelegate.swift; sourceTree = "<group>"; };
 		D06E12E21FEAA78F005EE88C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D06E12E31FEAA78F005EE88C /* Base.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Base.lproj; sourceTree = "<group>"; };
@@ -51,11 +51,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D0036CCB1FF698AF008CF8EB /* Tabs */ = {
+			isa = PBXGroup;
+			children = (
+				D01302101FF69A8400E5DEDE /* LibTable */,
+				D0036CD31FF698F7008CF8EB /* LibraryTab.swift */,
+			);
+			name = Tabs;
+			sourceTree = "<group>";
+		};
+		D01302101FF69A8400E5DEDE /* LibTable */ = {
+			isa = PBXGroup;
+			children = (
+				D01302131FF69A8C00E5DEDE /* LibTableView.swift */,
+				D01302111FF69A8C00E5DEDE /* LibTableViewCell.swift */,
+				D01302121FF69A8C00E5DEDE /* LibTableViewHandler.swift */,
+			);
+			path = LibTable;
+			sourceTree = "<group>";
+		};
 		D039B4AD1BF4D7950024005F = {
 			isa = PBXGroup;
 			children = (
 				D0DFAD1F1CB158BA00555B21 /* Base */,
-				D05682941FEEC29600B68DD9 /* Tabs */,
+				D0036CCB1FF698AF008CF8EB /* Tabs */,
 				D0DFAD221CB159B100555B21 /* Data */,
 				D06E12DE1FEAA779005EE88C /* AppDelegate.swift */,
 				D0A3BFD91FEEACE7004B7618 /* Music.swift */,
@@ -69,25 +88,6 @@
 				D039B4B61BF4D7950024005F /* 0_2 - Music.app */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		D05682941FEEC29600B68DD9 /* Tabs */ = {
-			isa = PBXGroup;
-			children = (
-				D056829A1FEEC9BD00B68DD9 /* LibTable */,
-				D05682971FEEC47800B68DD9 /* LibraryTab.swift */,
-			);
-			path = Tabs;
-			sourceTree = "<group>";
-		};
-		D056829A1FEEC9BD00B68DD9 /* LibTable */ = {
-			isa = PBXGroup;
-			children = (
-				D056829B1FEEC9E400B68DD9 /* LibTableView.swift */,
-				D056829C1FEEC9E400B68DD9 /* LibTableViewCell.swift */,
-				D056829D1FEEC9E400B68DD9 /* LibTableViewHandler.swift */,
-			);
-			path = LibTable;
 			sourceTree = "<group>";
 		};
 		D0DFAD1F1CB158BA00555B21 /* Base */ = {
@@ -187,14 +187,14 @@
 			files = (
 				D06E12E01FEAA779005EE88C /* AppDelegate.swift in Sources */,
 				D06E12EF1FEAA7A8005EE88C /* DataBackup.swift in Sources */,
-				D05682981FEEC47800B68DD9 /* LibraryTab.swift in Sources */,
-				D05682A01FEEC9E400B68DD9 /* LibTableViewHandler.swift in Sources */,
 				D06E12EE1FEAA7A8005EE88C /* Globals.swift in Sources */,
+				D01302141FF69A8C00E5DEDE /* LibTableViewCell.swift in Sources */,
+				D01302151FF69A8C00E5DEDE /* LibTableViewHandler.swift in Sources */,
 				D06E12EB1FEAA790005EE88C /* Stdcomments.swift in Sources */,
 				D0A3BFD81FEEAA07004B7618 /* TabBar.swift in Sources */,
-				D056829F1FEEC9E400B68DD9 /* LibTableViewCell.swift in Sources */,
-				D056829E1FEEC9E400B68DD9 /* LibTableView.swift in Sources */,
+				D0036CD41FF698F7008CF8EB /* LibraryTab.swift in Sources */,
 				D0A3BFDA1FEEACE7004B7618 /* Music.swift in Sources */,
+				D01302161FF69A8C00E5DEDE /* LibTableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

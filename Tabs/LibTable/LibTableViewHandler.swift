@@ -49,7 +49,7 @@ class LibTableViewHandler : NSObject, UITableViewDataSource, UITableViewDelegate
 
     /********************************************************************************************************************************/
 	/**	@fcn		tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
-	 *  @brief		x
+	 *  @brief		get cell count
 	 *  @details	x
 	 */
 	/********************************************************************************************************************************/
@@ -63,7 +63,7 @@ class LibTableViewHandler : NSObject, UITableViewDataSource, UITableViewDelegate
     
     /********************************************************************************************************************************/
 	/**	@fcn		tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
-	 *  @brief		x
+     *  @brief		get a cell from table
 	 *  @details	x
 	 */
 	/********************************************************************************************************************************/
@@ -77,7 +77,7 @@ class LibTableViewHandler : NSObject, UITableViewDataSource, UITableViewDelegate
     
     /********************************************************************************************************************************/
 	/**	@fcn		tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
-	 *  @brief		x
+	 *  @brief		respond to a cell selection
 	 *  @details	x
 	 */
 	/********************************************************************************************************************************/
@@ -199,6 +199,7 @@ class LibTableViewHandler : NSObject, UITableViewDataSource, UITableViewDelegate
 	/**	@fcn		addNewRow()
 	 *  @brief		x
 	 *  @details	x
+     *  @todo       correct implementation
 	 */
 	/********************************************************************************************************************************/
     func addNewRow() {
