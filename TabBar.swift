@@ -33,14 +33,16 @@ import UIKit
 
 class TabBar : NSObject {
 
+    //UI
     var tbc   : UITabBarController;
     var navs  : [UINavigationController];
     var views : [UIView];
 
+    //Tabs
     var libTab : LibraryTab;
     
-    let names : [String] = ["Library", "For You", "Browse", "Radio", "Search"];
-    
+    //Data
+    //@todo     m
     
     /********************************************************************************************************************************/
     /** @fcn        init()
@@ -80,13 +82,13 @@ class TabBar : NSObject {
     /********************************************************************************************************************************/
     func initTabs() {
 
-        let N : Int = self.names.count;
+        let N : Int = tabNames.count;
         
         for i in 0..<N {
             
             let newView : UIView;
             let newViewController : UIViewController = UIViewController();
-            newViewController.title = names[i];
+            newViewController.title = tabNames[i];
 
             if(i == 0) {
                 newView = LibraryTab();

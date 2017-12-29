@@ -18,6 +18,8 @@ import UIKit
 let verbose : Bool    = false;
 let globals : Globals = Globals();
 
+let tabNames : [String] = ["Library", "For You", "Browse", "Radio", "Search"];
+
 
 /************************************************************************************************************************************/
 /*	@fcn		Globals                                                                                                             */
