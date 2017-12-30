@@ -25,7 +25,7 @@ class ForYouTab : UIView {
     
     //Data
     var m   : Music;
-    var art : UIImage;
+    var art : UIImage?;
     
     
     /********************************************************************************************************************************/
@@ -38,25 +38,23 @@ class ForYouTab : UIView {
         
         //Init Data
         self.m   = m;
-        
         artView = UIImageView(frame: CGRect(x: 0, y: 0, width: 100, height: 100));
-        artView.center = CGPoint(x:(UIScreen.main.bounds.width/2), y: (UIScreen.main.bounds.height/2));
-        
-        art = m.getArt(index: 1);
         
         //Super
         super.init(frame: UIScreen.main.bounds);
         
         //Init Data
-        print("ForYouTab.init():    I found: \(m.media[0].albumArtist!) - \(m.media[0].albumTitle!) is \(m.media[0].artwork != nil)");
+        artView.center = CGPoint(x:(UIScreen.main.bounds.width/2), y: (UIScreen.main.bounds.height/2));
+        art = m.getNowPlaying()?.artwork?.image(at: CGSize(width: 200, height: 200));
         
         //Init UI
         backgroundColor = UIColor.red;
-
         artView.image = art;
         
+        //Add Image
         addSubview(artView);
-        
+
+        print("ForYouTab.init():    I found: \(m.media[0].albumArtist!) - \(m.media[0].albumTitle!) is \(m.media[0].artwork != nil)");
         print("ForYouTab.init():    initialization completeX");
         
         return;

@@ -169,7 +169,6 @@ class Music: NSObject {
      *  @return     (UIImage) the selected album art
      *
      *  @note       returns with default size of <200x200>
-     *  @todo       test that size can be modified later!
      */
     /********************************************************************************************************************************/
     func getArt(index : Int) -> UIImage {
@@ -178,5 +177,22 @@ class Music: NSObject {
 
         return art;
     }
+    
+    
+    /********************************************************************************************************************************/
+    /** @fcn        getNowPlaying() -> MPMediaItem?
+     *  @brief      get the song playing in Music
+     *  @details    x
+     */
+    /********************************************************************************************************************************/
+    func getNowPlaying() -> MPMediaItem? {
+
+        let sysMP : MPMusicPlayerController & MPSystemMusicPlayerController = MPMusicPlayerController.systemMusicPlayer;
+
+        let currItem : MPMediaItem? = sysMP.nowPlayingItem;
+        
+        return currItem;
+    }
 }
+
 
