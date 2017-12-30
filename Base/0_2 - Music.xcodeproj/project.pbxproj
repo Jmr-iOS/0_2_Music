@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D0608FC41FF7DFE40085BC2D /* ForYouTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0608FC31FF7DFE40085BC2D /* ForYouTab.swift */; };
 		D06E12E01FEAA779005EE88C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06E12DE1FEAA779005EE88C /* AppDelegate.swift */; };
 		D06E12E71FEAA790005EE88C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D06E12E21FEAA78F005EE88C /* Assets.xcassets */; };
 		D06E12E81FEAA790005EE88C /* Base.lproj in Resources */ = {isa = PBXBuildFile; fileRef = D06E12E31FEAA78F005EE88C /* Base.lproj */; };
@@ -24,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		D039B4B61BF4D7950024005F /* 0_2 - Music.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "0_2 - Music.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0608FC31FF7DFE40085BC2D /* ForYouTab.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ForYouTab.swift; path = ../Tabs/ForYouTab.swift; sourceTree = "<group>"; };
 		D06E12DE1FEAA779005EE88C /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../AppDelegate.swift; sourceTree = "<group>"; };
 		D06E12E21FEAA78F005EE88C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D06E12E31FEAA78F005EE88C /* Base.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Base.lproj; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 			children = (
 				D090F0541FF750D000D0DF13 /* LibTable */,
 				D090F0521FF74EAC00D0DF13 /* LibraryTab.swift */,
+				D0608FC31FF7DFE40085BC2D /* ForYouTab.swift */,
 			);
 			name = Tabs;
 			sourceTree = "<group>";
@@ -191,6 +194,7 @@
 				D0D0FAF91FF762D500C3FD01 /* LibTableViewHandler.swift in Sources */,
 				D06E12EE1FEAA7A8005EE88C /* Globals.swift in Sources */,
 				D090F0531FF74EAC00D0DF13 /* LibraryTab.swift in Sources */,
+				D0608FC41FF7DFE40085BC2D /* ForYouTab.swift in Sources */,
 				D06E12EB1FEAA790005EE88C /* Stdcomments.swift in Sources */,
 				D0D0FAFA1FF762D500C3FD01 /* LibTableView.swift in Sources */,
 				D0A3BFD81FEEAA07004B7618 /* TabBar.swift in Sources */,

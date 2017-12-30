@@ -6,7 +6,7 @@
  *
  *  @author     Justin Reina, Firmware Engineer, Jaostech
  *  @created    12/21/17
- *  @last rev   12/29/17
+ *  @last rev   12/30/17
  *
  *  @section     Reference
  *      http://stackoverflow.com/questions/24046898/how-do-i-create-a-new-swift-project-without-using-storyboards
@@ -21,7 +21,7 @@
  *
  * @section    Opens
  *      insert tab icons
- *      table listing refreshes correctly (swipe dowm does not alter top of table)
+ *      access & modification of song ratings
  *
  * @section    Legal Disclaimer
  *      All contents of this source file and/or any other Jaostech related source files are the explicit property on Jaostech
@@ -39,7 +39,8 @@ class TabBar : NSObject {
     var views : [UIView];
 
     //Tabs
-    var libTab : LibraryTab?;
+    var libTab    : LibraryTab?;
+    var forYouTab : ForYouTab?;
     
     //Data
     var m : Music;                                                  /* container and wrapper, with access routines to library       */
@@ -69,6 +70,7 @@ class TabBar : NSObject {
         
         //Setup Tabs
         libTab    = LibraryTab(bar: self);
+        forYouTab = ForYouTab(m : m);
         initTabs();
         
 
@@ -99,6 +101,8 @@ class TabBar : NSObject {
 
             if(i == 0) {
                 newView = libTab!;
+            } else if (i == 1) {
+                newView = forYouTab!;
             } else {
                 newView = UIView();
                 addMiscViewLabel(newView, vc: newViewController);

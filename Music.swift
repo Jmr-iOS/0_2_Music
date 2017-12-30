@@ -54,9 +54,11 @@ class Music: NSObject {
     override init() {
 
         //Init
-        query = MPMediaQuery();                                    /* grab handle                                              */
-        media = query.items!;                                 /* grab media listing                                       */
-        artists = [];                                              /* init empty                                               */
+        query = MPMediaQuery();                                         /* grab handle                                              */
+        media = query.items!;                                           /* grab media listing                                       */
+        artists = [];                                                   /* init empty                                               */
+        
+        //Super
         super.init();
         
         //Find the media
@@ -113,9 +115,9 @@ class Music: NSObject {
             
             //only if found in file
             if(nil != media[i].albumArtist) {
-            
+                
                 let newArtist : String = media[i].albumArtist!;
-
+                
                 //Check if existing in artists
                 if(!artists.contains(newArtist)) {
                     artists.append(newArtist);                                         /* append if not found                       */
@@ -156,6 +158,25 @@ class Music: NSObject {
     /********************************************************************************************************************************/
     func getArtist(i : Int) -> String {
         return self.artists[i];
+    }
+    
+    
+    /********************************************************************************************************************************/
+    /** @fcn        getArt(index : Int) -> UIImage
+     *  @brief      x
+     *  @details    x
+     *
+     *  @return     (UIImage) the selected album art
+     *
+     *  @note       returns with default size of <200x200>
+     *  @todo       test that size can be modified later!
+     */
+    /********************************************************************************************************************************/
+    func getArt(index : Int) -> UIImage {
+
+        let art : UIImage = (self.media[index].artwork?.image(at: CGSize(width: 200, height: 200)))!;
+
+        return art;
     }
 }
 

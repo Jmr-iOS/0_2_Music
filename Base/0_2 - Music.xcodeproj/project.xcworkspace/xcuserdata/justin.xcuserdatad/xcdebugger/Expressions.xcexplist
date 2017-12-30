@@ -3,6 +3,14 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "Music.parseArtists():Music.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "media[i]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "LibTableViewCell.setArtist(artist:):LibTableViewCell.swift">
       </ContextState>
       <ContextState
