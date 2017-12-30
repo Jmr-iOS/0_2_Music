@@ -144,7 +144,7 @@ class Music: NSObject {
     func getArtists() -> [String] {
         return self.artists;
     }
-    
+
 
     /********************************************************************************************************************************/
     /** @fcn        func getArtist(i : Int) -> String

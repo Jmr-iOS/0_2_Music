@@ -68,8 +68,9 @@ class TabBar : NSObject {
         m.parseArtists();
         
         //Setup Tabs
-        libTab = LibraryTab(bar: self);
+        libTab    = LibraryTab(bar: self);
         initTabs();
+        
 
         print("TabBar.init():    initialization complete");
         
@@ -97,7 +98,7 @@ class TabBar : NSObject {
             newViewController.title = tabNames[i];
 
             if(i == 0) {
-                newView = LibraryTab(bar:self);
+                newView = libTab!;
             } else {
                 newView = UIView();
                 addMiscViewLabel(newView, vc: newViewController);

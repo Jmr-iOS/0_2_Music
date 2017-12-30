@@ -1,12 +1,8 @@
 /************************************************************************************************************************************/
 /** @file		LibTableViewHandler.swift
- *  @project    0_2 - Music
+ *  @project    x
  * 	@brief		x
  * 	@details	x
- *
- * 	@note you need to create a custom handler to ensure the cell's are CREATED and ACCESSED differently in this example code
- *        differently than the standard table example. It's not that a seperate class is REQUIRED, it's just dramatically cleaner and
- *        safer for longterm retention!
  *
  * 	@section	Opens
  * 			full review & completion
@@ -23,20 +19,20 @@ class LibTableViewHandler : NSObject, UITableViewDataSource, UITableViewDelegate
    
     let verbose : Bool = true;
     
-    var table : LibTableView!;
+	var table : LibTableView!;
     
     
     /********************************************************************************************************************************/
-    /** @fcn        init(items: [String], table : UICustomTableView)
+    /** @fcn        init()
      *  @brief      x
      *  @details    x
      */
     /********************************************************************************************************************************/
-    init(items: [String], table : LibTableView) {
+	init(table : LibTableView) {
 
         self.table = table;
         
-        if(verbose){ print("LibTableViewHandler.init():      the CustomTableViewHandler was initialized"); }
+        if(verbose){ print("LibTableViewHandler.init():      the LibTableViewHandler was initialized"); }
 
         return;
     }
@@ -49,11 +45,11 @@ class LibTableViewHandler : NSObject, UITableViewDataSource, UITableViewDelegate
 
     /********************************************************************************************************************************/
 	/**	@fcn		tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
-	 *  @brief		get cell count
+	 *  @brief		x
 	 *  @details	x
 	 */
 	/********************************************************************************************************************************/
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         if(verbose){ print("Handler.tableView():           (numberOfRowsInSection) The table will now have \(self.table.getCellCount()), cause I just said so..."); }
         
@@ -63,11 +59,11 @@ class LibTableViewHandler : NSObject, UITableViewDataSource, UITableViewDelegate
     
     /********************************************************************************************************************************/
 	/**	@fcn		tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
-     *  @brief		get a cell from table
+	 *  @brief		x
 	 *  @details	x
 	 */
 	/********************************************************************************************************************************/
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
         let cell : LibTableViewCell = self.table.myLibCells[(indexPath as NSIndexPath).item];
         
@@ -77,13 +73,13 @@ class LibTableViewHandler : NSObject, UITableViewDataSource, UITableViewDelegate
     
     /********************************************************************************************************************************/
 	/**	@fcn		tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
-	 *  @brief		respond to a cell selection
+	 *  @brief		x
 	 *  @details	x
 	 */
 	/********************************************************************************************************************************/
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
        
-        if(true){ print("CustomTableViewHandler.tableView():     handling a cell tap of \((indexPath as NSIndexPath).item)"); }
+        if(true){ print("LibTableViewHandler.tableView():     handling a cell tap of \((indexPath as NSIndexPath).item)"); }
 
         //CUSTOM
         table.deselectRow(at: indexPath, animated:true);
@@ -132,8 +128,6 @@ class LibTableViewHandler : NSObject, UITableViewDataSource, UITableViewDelegate
             break;
         }
         
-        print("   ");
-        
         return;
     }
     
@@ -147,7 +141,7 @@ class LibTableViewHandler : NSObject, UITableViewDataSource, UITableViewDelegate
 	 *		http://stackoverflow.com/questions/24103069/swift-add-swipe-to-delete-tableviewcell
 	 */
 	/********************************************************************************************************************************/
-    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+	func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
 
         return true;
     }
@@ -159,10 +153,10 @@ class LibTableViewHandler : NSObject, UITableViewDataSource, UITableViewDelegate
 	 *  @details	x
 	 */
 	/********************************************************************************************************************************/
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+	func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         
         if(self.table.myLibCells.count > 0) {
-            self.table.removeCell((indexPath as NSIndexPath).item);                 /* handle delete (by removing the data from     */
+            self.table.removeCell((indexPath as NSIndexPath).item);            /* handle delete (by removing the data from     */
         }                                                                           /* your array and updating the tableview)       */
         
         return;
@@ -179,7 +173,7 @@ class LibTableViewHandler : NSObject, UITableViewDataSource, UITableViewDelegate
 	 *  @details	x
 	 */
 	/********************************************************************************************************************************/
-    func getCharName(_ i : Int) -> String {
+	func getCharName(_ i : Int) -> String {
         return String(describing: UnicodeScalar(i + Int(("A" as UnicodeScalar).value)));
     }
     
@@ -190,7 +184,7 @@ class LibTableViewHandler : NSObject, UITableViewDataSource, UITableViewDelegate
 	 *  @details	x
 	 */
 	/********************************************************************************************************************************/
-    func getRowLabel(_ charName : String, index: Int) -> String {
+	func getRowLabel(_ charName : String, index: Int) -> String {
         return String(format: "Item '%@' (%d)", charName, index);
     }
     
@@ -199,10 +193,9 @@ class LibTableViewHandler : NSObject, UITableViewDataSource, UITableViewDelegate
 	/**	@fcn		addNewRow()
 	 *  @brief		x
 	 *  @details	x
-     *  @todo       correct implementation
 	 */
 	/********************************************************************************************************************************/
-    func addNewRow() {
+	func addNewRow() {
         
         let charName : String = self.getCharName(self.table.getCellCount());
         

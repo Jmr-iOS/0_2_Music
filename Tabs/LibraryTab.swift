@@ -1,5 +1,5 @@
 /************************************************************************************************************************************/
-/** @file       LibraryTab.swift
+/** @file       LibTab.swift
  *  @project    0_2 - Music
  *  @brief      x
  *  @details    x
@@ -12,7 +12,10 @@
  *  @notes      x
  *
  *  @section    Opens
- *      none current
+ *      create a large, independent table by direct copy from demo
+ *      validate scrolling
+ *      SLOWLY transition to artists, with incremental commits and checks
+ *      rename to Library and complete
  *
  *  @section    Legal Disclaimer
  *      All contents of this source file and/or any other Jaostech related source files are the explicit property on Jaostech
@@ -21,27 +24,17 @@
 /************************************************************************************************************************************/
 import UIKit
 
-//@note     global vars
-
 
 class LibraryTab : UIView {
 
     //Table
     var verbose : Bool = false;
-    
-    var tableView       : UITableView!;
-    var libTable        : LibTableView!;
+
+    var tableView          : LibTableView!;                                          /* uses either based on mode                */
     var libTableHandler : LibTableViewHandler!;
     
-    //options
-    var cellBordersVisible : Bool = true;
-    var usesCustomTiles    : Bool = true;
-    
-    //std table config
-    let cellSelectionFade : Bool = true;
-
     var bar : TabBar;
-
+    
     /********************************************************************************************************************************/
     /** @fcn        init()
      *  @brief      x
@@ -49,53 +42,55 @@ class LibraryTab : UIView {
      */
     /********************************************************************************************************************************/
     init(bar : TabBar) {
-        
+    
         self.bar = bar;
         
         super.init(frame: UIScreen.main.bounds);
 
         self.addLibTable();
-        
-        print("LibraryTab.init():    initialization complete");
 
+        print("LibTab.init():    initialization complete");
+        
         return;
     }
-    
-    
+
+
     /********************************************************************************************************************************/
-    /** @fcn        addLibTable()
+    /** @fcn        addCustomTable()
      *  @brief      x
      *  @details    x
      */
     /********************************************************************************************************************************/
     func addLibTable() {
         
-        if(verbose){ print("ViewController.addCustomTable():      adding a custom table"); }
+        if(verbose){ print("LibraryTab.addCustomTable():      adding a custom table"); }
         
-        libTable = LibTableView(bar: self.bar, frame:self.frame, style:UITableViewStyle.plain);
+        tableView = LibTableView(bar: bar, frame:self.frame, style:UITableViewStyle.plain);
         
         //add the handler
-        libTableHandler = LibTableViewHandler(items: bar.getArtists(), table: libTable);
+        libTableHandler = LibTableViewHandler(table: tableView);
         
-        libTable.delegate   = libTableHandler;                                    /* Set both to handle clicks & provide data       */
-        libTable.dataSource = libTableHandler;
+        tableView.delegate   = libTableHandler;                                         /* Set both to handle clicks & provide data */
+        tableView.dataSource = libTableHandler;
         
         //init the table
-        libTable.separatorColor = UIColor.gray;
-        libTable.separatorStyle = (cellBordersVisible) ? .singleLine : .none;
+        tableView.separatorColor = UIColor.black;
+        tableView.separatorStyle = .singleLine;
         
         //Safety
-        libTable.backgroundColor = UIColor.black;
+        tableView.backgroundColor = UIColor.black;
         
         //Set the row height
-        libTable.rowHeight = 25;
+        tableView.rowHeight = 25;
         
-        if(verbose){ print("LibraryTab.addLibTable():      it was shown"); }
+        if(verbose){ print("LibraryTab.addCustomTable():      it was shown"); }
         
-        self.addSubview(libTable);
+        self.addSubview(tableView);
         
         return;
     }
+    
+    
     
     /********************************************************************************************************************************/
     /** @fcn        required init?(coder aDecoder: NSCoder)

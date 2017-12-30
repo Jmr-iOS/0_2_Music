@@ -1,6 +1,6 @@
 /************************************************************************************************************************************/
 /** @file		LibTableViewCell.swift
- *  @project    0_2 - Music
+ *  @project    x
  * 	@brief		x
  * 	@details	x
  *
@@ -23,7 +23,6 @@ class LibTableViewCell : UITableViewCell {
     
     let cellSelectionFade : Bool = false;
 
-    
     /********************************************************************************************************************************/
 	/**	@fcn		override init(style: UITableViewCellStyle, reuseIdentifier: String?)
 	 *  @brief		x
@@ -34,13 +33,12 @@ class LibTableViewCell : UITableViewCell {
         super.init(style:style, reuseIdentifier:reuseIdentifier);
 
         if(self.cellSelectionFade == true) {
-            self.selectionStyle = UITableViewCellSelectionStyle.gray;   //Options are 'Gray/Blue/Default/None'
+            self.selectionStyle = UITableViewCellSelectionStyle.gray;           /* Options are 'Gray/Blue/Default/None'             */
         } else {
             self.selectionStyle = UITableViewCellSelectionStyle.none;
         }
         
-        
-        if(verbose){ print("LibTableViewCell.init():    the LibableViewCell was initialized"); }
+        if(verbose){ print("LibTableViewCell.init():         the LibTableViewCell was initialized"); }
         
         return;
     }

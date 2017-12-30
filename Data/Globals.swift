@@ -1,9 +1,6 @@
 /************************************************************************************************************************************/
 /** @file		Globals.swift
- *	@project    0_0 - Empty Template (Swift)
- *
- * 	@author		Justin Reina, Firmware Engineer, Jaostech
- * 	@created	4/3/16
+ *	@project    0_2 - Music
  *
  * 	@section	Opens
  * 			none current
@@ -39,7 +36,7 @@ class Globals : NSObject {
     override init() {
         super.init();
         
-        //(todo) make an App Setting to check too!
+        //@todo     make an App Setting to check too!
         let dispIsZoomed : Bool = (UIDevice.current.name == "Justin's iPhone");
         
         var zoomStat : String = "Globals.init():                        I am not zoomed";
