@@ -43,8 +43,14 @@ class LibTableView : UITableView {
         
         self.translatesAutoresizingMaskIntoConstraints = false;                         /* Std                                      */
   
+        //@pre  handle null
+        var n = (bar.getArtists().count-1);
+        if(n < 0) {
+            n = 0;
+        }
+        
         //Setup Table
-        for i in 0...(bar.getArtists().count-1) {
+        for i in 0...(n) {
             
             let newCell : LibTableViewCell = LibTableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "cell");
             
@@ -53,7 +59,7 @@ class LibTableView : UITableView {
             myLibCells.append(newCell);
         }
         
-        if(verbose){ print("LibTableView.init():             the LibTableView was initialized"); }
+        if(verbose){ print("LibTableView.init():           the LibTableView was initialized"); }
 
         return;
     }
@@ -63,36 +69,6 @@ class LibTableView : UITableView {
 	/**	@fcn		addNewCell(_ cellString : String)
 	 *  @brief		x
 	 *  @details	x
-	 *
-	 *  @section	Purpose
-	 *  	x
-	 *
-	 *  @param		[in]	name	descrip
-	 *
-	 *  @param		[out]	name	descrip
-	 *
-	 *  @return		(type) descrip
-	 *
-	 *  @pre		x
-	 *
-	 *  @post		x
-	 *
-	 *  @section	Operation
-	 *		x
-	 *		
-	 *  @section	Opens
-	 *  	x
-	 *
-	 *  @section	Hazards & Risks
-	 *  	x
-	 *
-	 *	@section	Todo
-	 *		x
-	 *
-	 *  @section	Timing
-	 *  	x
-	 *
-	 *  @note		x
 	 */
 	/********************************************************************************************************************************/
 	func addNewCell(_ cellString : String) {

@@ -32,7 +32,7 @@ class LibTableViewHandler : NSObject, UITableViewDataSource, UITableViewDelegate
 
         self.table = table;
         
-        if(verbose){ print("LibTableViewHandler.init():      the LibTableViewHandler was initialized"); }
+        if(verbose){ print("LibTableViewHandler.init():    the LibTableViewHandler was initialized"); }
 
         return;
     }
@@ -51,7 +51,7 @@ class LibTableViewHandler : NSObject, UITableViewDataSource, UITableViewDelegate
 	/********************************************************************************************************************************/
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        if(verbose){ print("Handler.tableView():           (numberOfRowsInSection) The table will now have \(self.table.getCellCount()), cause I just said so..."); }
+        if(verbose){ print("Handler.tableView(NRS):        the table will now have \(self.table.getCellCount()), cause I just said so..."); }
         
         return self.table.getCellCount();                                  /* return how many rows you want printed....!       */
     }
@@ -79,7 +79,7 @@ class LibTableViewHandler : NSObject, UITableViewDataSource, UITableViewDelegate
 	/********************************************************************************************************************************/
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
        
-        if(true){ print("LibTableViewHandler.tableView():     handling a cell tap of \((indexPath as NSIndexPath).item)"); }
+        if(true){ print("LibTableViewHandler.tableView(DSR):  handling a cell tap of \((indexPath as NSIndexPath).item)"); }
 
         //CUSTOM
         table.deselectRow(at: indexPath, animated:true);

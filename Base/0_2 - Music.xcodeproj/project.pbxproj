@@ -11,11 +11,12 @@
 		D06E12E01FEAA779005EE88C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06E12DE1FEAA779005EE88C /* AppDelegate.swift */; };
 		D06E12E71FEAA790005EE88C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D06E12E21FEAA78F005EE88C /* Assets.xcassets */; };
 		D06E12E81FEAA790005EE88C /* Base.lproj in Resources */ = {isa = PBXBuildFile; fileRef = D06E12E31FEAA78F005EE88C /* Base.lproj */; };
-		D06E12EA1FEAA790005EE88C /* Empty.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D06E12E51FEAA78F005EE88C /* Empty.storyboard */; };
-		D06E12EB1FEAA790005EE88C /* Stdcomments.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06E12E61FEAA790005EE88C /* Stdcomments.swift */; };
 		D06E12EE1FEAA7A8005EE88C /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06E12EC1FEAA7A8005EE88C /* Globals.swift */; };
 		D06E12EF1FEAA7A8005EE88C /* DataBackup.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06E12ED1FEAA7A8005EE88C /* DataBackup.swift */; };
 		D090F0531FF74EAC00D0DF13 /* LibraryTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = D090F0521FF74EAC00D0DF13 /* LibraryTab.swift */; };
+		D091D957200A55F700BFBA67 /* Empty.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D091D954200A55F700BFBA67 /* Empty.storyboard */; };
+		D091D958200A55F700BFBA67 /* NewClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D091D955200A55F700BFBA67 /* NewClass.swift */; };
+		D091D959200A55F700BFBA67 /* Stdcomments.swift in Sources */ = {isa = PBXBuildFile; fileRef = D091D956200A55F700BFBA67 /* Stdcomments.swift */; };
 		D0A3BFD81FEEAA07004B7618 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A3BFD71FEEAA07004B7618 /* TabBar.swift */; };
 		D0A3BFDA1FEEACE7004B7618 /* Music.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A3BFD91FEEACE7004B7618 /* Music.swift */; };
 		D0D0FAF81FF762D500C3FD01 /* LibTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D0FAF51FF762D500C3FD01 /* LibTableViewCell.swift */; };
@@ -30,11 +31,12 @@
 		D06E12E21FEAA78F005EE88C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D06E12E31FEAA78F005EE88C /* Base.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Base.lproj; sourceTree = "<group>"; };
 		D06E12E41FEAA78F005EE88C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D06E12E51FEAA78F005EE88C /* Empty.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Empty.storyboard; sourceTree = "<group>"; };
-		D06E12E61FEAA790005EE88C /* Stdcomments.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stdcomments.swift; sourceTree = "<group>"; };
 		D06E12EC1FEAA7A8005EE88C /* Globals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Globals.swift; path = ../Data/Globals.swift; sourceTree = "<group>"; };
 		D06E12ED1FEAA7A8005EE88C /* DataBackup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataBackup.swift; path = ../Data/DataBackup.swift; sourceTree = "<group>"; };
 		D090F0521FF74EAC00D0DF13 /* LibraryTab.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LibraryTab.swift; path = ../Tabs/LibraryTab.swift; sourceTree = "<group>"; };
+		D091D954200A55F700BFBA67 /* Empty.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Empty.storyboard; path = ../../../../../Ref/iOS/Base/Empty.storyboard; sourceTree = "<group>"; };
+		D091D955200A55F700BFBA67 /* NewClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewClass.swift; path = ../../../../../Ref/iOS/Base/NewClass.swift; sourceTree = "<group>"; };
+		D091D956200A55F700BFBA67 /* Stdcomments.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Stdcomments.swift; path = ../../../../../Ref/iOS/Base/Stdcomments.swift; sourceTree = "<group>"; };
 		D0A3BFD71FEEAA07004B7618 /* TabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TabBar.swift; path = ../TabBar.swift; sourceTree = "<group>"; };
 		D0A3BFD91FEEACE7004B7618 /* Music.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Music.swift; path = ../Music.swift; sourceTree = "<group>"; };
 		D0D0FAF51FF762D500C3FD01 /* LibTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LibTableViewCell.swift; path = ../Tabs/LibTable/LibTableViewCell.swift; sourceTree = "<group>"; };
@@ -98,9 +100,10 @@
 			children = (
 				D06E12E21FEAA78F005EE88C /* Assets.xcassets */,
 				D06E12E31FEAA78F005EE88C /* Base.lproj */,
-				D06E12E51FEAA78F005EE88C /* Empty.storyboard */,
 				D06E12E41FEAA78F005EE88C /* Info.plist */,
-				D06E12E61FEAA790005EE88C /* Stdcomments.swift */,
+				D091D954200A55F700BFBA67 /* Empty.storyboard */,
+				D091D955200A55F700BFBA67 /* NewClass.swift */,
+				D091D956200A55F700BFBA67 /* Stdcomments.swift */,
 				D039B4B71BF4D7950024005F /* Products */,
 			);
 			name = Base;
@@ -175,9 +178,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D091D957200A55F700BFBA67 /* Empty.storyboard in Resources */,
 				D06E12E81FEAA790005EE88C /* Base.lproj in Resources */,
 				D06E12E71FEAA790005EE88C /* Assets.xcassets in Resources */,
-				D06E12EA1FEAA790005EE88C /* Empty.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,9 +196,10 @@
 				D06E12EF1FEAA7A8005EE88C /* DataBackup.swift in Sources */,
 				D0D0FAF91FF762D500C3FD01 /* LibTableViewHandler.swift in Sources */,
 				D06E12EE1FEAA7A8005EE88C /* Globals.swift in Sources */,
+				D091D959200A55F700BFBA67 /* Stdcomments.swift in Sources */,
+				D091D958200A55F700BFBA67 /* NewClass.swift in Sources */,
 				D090F0531FF74EAC00D0DF13 /* LibraryTab.swift in Sources */,
 				D0608FC41FF7DFE40085BC2D /* ForYouTab.swift in Sources */,
-				D06E12EB1FEAA790005EE88C /* Stdcomments.swift in Sources */,
 				D0D0FAFA1FF762D500C3FD01 /* LibTableView.swift in Sources */,
 				D0A3BFD81FEEAA07004B7618 /* TabBar.swift in Sources */,
 				D0A3BFDA1FEEACE7004B7618 /* Music.swift in Sources */,

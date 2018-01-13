@@ -4,9 +4,6 @@
  *  @brief      x
  *  @details    x
  *
- *  @auth       Created by Justin Reina on 11/11/17
- *  @cpr        Copyright © 2017 Jmr. All rights reserved
- *
  *  @section    Hide strange unwanted Xcode logs
  *        https://stackoverflow.com/questions/37800790/hide-strange-unwanted-xcode-logs
  *
@@ -21,6 +18,12 @@
  *
  *  @section   Next Steps
  *       - Print listing of artists to console
+ *
+ *  @section    Media Descriptors (content to add)
+ *      mood or moment for song
+ *      passion or person hat you can apply to (for individual artists, albums or songs)
+ *      used just like genres, for sorting & for play
+ *      subview for playing song allows selection or review, making config & review easy!
  *
  *  @section    MPMediaLibraryAuthorizationStatus
  *      case notDetermined: (0)The user hasn't determined whether to authorize the use of their media library.
@@ -69,19 +72,23 @@ class Music: NSObject {
         let rslt_val : Int = rslt.rawValue;
 
         //Handle auth
-        print("Access level on device found as '\(authLvls[rslt_val])'");
+        print("Music.init():                  access level on device found as '\(authLvls[rslt_val])'");
         
-        if(MPMediaLibraryAuthorizationStatus.authorized/*MEDIA_LIB_AUTH_AUTHORIZED*/ != rslt/*?.rawValue*/) {
-            print("Not authorized for library access, aborting.");
+        if(MPMediaLibraryAuthorizationStatus.authorized != rslt) {
+            print("Music.init():                  not authorized for library access, aborting");
             return;
         }
         
         //Check Media
         if(result != nil) {
-            print("Found", result!.count, "files");
-        } else {
-            print("No music found on device");
+            if(result!.count > 0) {
+                print("Music.init():                  found", result!.count, "files");
+                return;
+            }
         }
+        
+        //Else nil
+        print("Music.init():                  no music found on device");
         
         return;
     }
@@ -144,7 +151,7 @@ class Music: NSObject {
      */
     /********************************************************************************************************************************/
     func getArtists() -> [String] {
-        return self.artists;
+        return artists;
     }
 
 
@@ -157,7 +164,13 @@ class Music: NSObject {
      */
     /********************************************************************************************************************************/
     func getArtist(i : Int) -> String {
-        return self.artists[i];
+        
+        //@pre  handle empty
+        if(artists.count == 0) {
+            return "nil";
+        }
+        
+        return artists[i];
     }
     
     

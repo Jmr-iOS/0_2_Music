@@ -1,12 +1,12 @@
 /************************************************************************************************************************************/
 /** @file       TabBar.swift
  *  @project    0_2 - Music
- *  @brief      x
+ *  @brief      reproduce the Apple Music App
  *  @details    x
  *
  *  @author     Justin Reina, Firmware Engineer, Jaostech
  *  @created    12/21/17
- *  @last rev   12/30/17
+ *  @last rev   1/13/18
  *
  *  @section     Reference
  *      http://stackoverflow.com/questions/24046898/how-do-i-create-a-new-swift-project-without-using-storyboards
@@ -74,7 +74,7 @@ class TabBar : NSObject {
         initTabs();
         
 
-        print("TabBar.init():    initialization complete");
+        print("TabBar.init():                 initialization complete");
         
         return;
     }
@@ -223,7 +223,7 @@ class TabBar : NSObject {
      *  @return     ([String]) artist names
      */
     /********************************************************************************************************************************/
-    func getArtists() -> [String] {
+    func getArtists() -> [String] {        
         return self.m.getArtists();
     }
     

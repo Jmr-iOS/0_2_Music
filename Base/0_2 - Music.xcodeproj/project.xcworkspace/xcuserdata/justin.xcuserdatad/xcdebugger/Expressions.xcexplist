@@ -3,10 +3,10 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "Music.parseArtists():Music.swift">
+         contextName = "ForYouTab.init(m:):ForYouTab.swift">
          <PersistentStrings>
             <PersistentString
-               value = "media[i]">
+               value = "m.media[0]">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -18,6 +18,30 @@
          <PersistentStrings>
             <PersistentString
                value = "self.myLibCells[8].subjectField">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "Music.parseArtists():Music.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "media[i]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "TabBar.getArtists():TabBar.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "m.artists">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "Music.getArtist(i:):Music.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "artists">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

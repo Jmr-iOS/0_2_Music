@@ -49,7 +49,7 @@ class LibraryTab : UIView {
 
         self.addLibTable();
 
-        print("LibTab.init():    initialization complete");
+        print("LibTab.init():                 initialization complete");
         
         return;
     }

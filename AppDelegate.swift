@@ -59,7 +59,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window?.makeKeyAndVisible();
         
-        print("AppDelegate.application():          Application launch complete");
+        print("AppDelegate.application():     application launch complete");
         
         return true;
     }

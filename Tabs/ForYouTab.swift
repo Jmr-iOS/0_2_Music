@@ -54,8 +54,20 @@ class ForYouTab : UIView {
         //Add Image
         addSubview(artView);
 
-        print("ForYouTab.init():    I found: \(m.media[0].albumArtist!) - \(m.media[0].albumTitle!) is \(m.media[0].artwork != nil)");
-        print("ForYouTab.init():    initialization completeX");
+        //@pre  handle empty media
+        var artistStr  : String = "nil";
+        var albumStr   : String = "nil";
+        var artworkStr : String = "nil";
+        
+        if(m.media.count > 0) {
+            artistStr  = m.media[0].albumArtist!;
+            albumStr   = m.media[0].albumTitle!;
+            artworkStr = "\(m.media[0].artwork != nil)";
+        }
+        
+        
+        print("ForYouTab.init():              i found: \(artistStr) - \(albumStr) is \(artworkStr)");
+        print("ForYouTab.init():              initialization completeX");
         
         return;
     }
